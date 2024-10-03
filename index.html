@@ -10,16 +10,19 @@
             font-family: 'Arial', sans-serif;
             background-color: #1e1e1e;
             color: #333;
-            margin: 0;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
         }
+		.Main {
+		margin: auto;
+		
+		}
+		.bottom {
+		text-align: center;
+		}
         h1 {
             font-size: 24px;
             margin-bottom: 20px;
             color: #4CAF50; /* Цвет заголовка */
+			text-align: center;
         }
         .question {
             background: white;
@@ -27,8 +30,7 @@
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             padding: 15px;
             margin-bottom: 20px;
-            width: 100%;
-            max-width: 400px; /* Максимальная ширина для удобства чтения */
+
         }
         .question label {
             display: block;
@@ -57,15 +59,24 @@
             margin-top: 20px;
 			color: white;
         }
+		.quizForm {
+		display: block;
+		margin: auto;
+		max-width: 500px;
+		}
+
     </style>
 </head>
 <body>
+<div class="Main">
     <h1>Мегатест Диаскина!</h1>
-    <form id="quizForm">
+    <form class="quizForm" id="quizForm">
     </form>
+	<div class="bottom">
     <button type="button" onclick="checkAnswers()">Показать результат</button>
     <div class="result" id="result"></div>
     <script src="quiz.js"></script>
-	<p>Привет от Олега!</p>
+	<p>Привет от Олега!</p></div>
+</div>
 </body>
 </html>
