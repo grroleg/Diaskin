@@ -1514,8 +1514,11 @@ function checkAnswers() {
     });
 
     // Вывод результата
-    const resultDiv = document.getElementById('result');
-    resultDiv.innerText = `Ты ответил правильно на ${correctAnswers} из ${questions.length} вопросов.`;
+    // Вывод результата
+const resultDiv = document.getElementById('result');
+const percentage = (correctAnswers / questions.length) * 100;
+resultDiv.innerText = `Ты ответил правильно на ${correctAnswers} из ${questions.length} вопросов (${percentage.toFixed(2)}%).`;
+
 }
 
 // Генерация опроса при загрузке страницы
